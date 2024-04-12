@@ -16,6 +16,10 @@ brands = [
 
 # Flask Route
 # First part is endpoint
-@app.get("/brands")
+@app.get("/brand")
 def get_brands():
     return {"brands" : brands}
+
+@app.post("/brand")
+def create_brand():
+    pass
