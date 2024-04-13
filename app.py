@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 
 app = Flask(__name__)
 
@@ -22,4 +22,7 @@ def get_brands():
 
 @app.post("/brand")
 def create_brand():
-    pass
+    request_data = request.get_json()
+    new_brand = {"name": request_data["name"], "items": []}
+    brands.append(new_brand)
+    return new_brand, 201
