@@ -1,4 +1,4 @@
-from flask import Flask, request
+from flask import Flask
 
 app = Flask(__name__)
 
@@ -22,4 +22,8 @@ def get_brands():
 
 @app.post("/brand")
 def create_brand():
+    pass
+
+@app.post("/brand/<string:name>/item")
+def create_item(name):
     pass
