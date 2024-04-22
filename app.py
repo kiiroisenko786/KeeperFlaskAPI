@@ -43,7 +43,7 @@ def get_brand(brand_id):
     try:
         return brands[brand_id]
     except KeyError:
-        return {"message": "Brad not found"}, 404
+        return {"message": "Brand not found"}, 404
 
 # Returns a specific item
 @app.get("/item/<string:item_id>")
@@ -51,4 +51,4 @@ def get_item(item_id):
     try:
         return items[item_id]
     except KeyError:
-        return {"message": "Brand not found"}, 404
+        return {"message": "Item not found"}, 404
