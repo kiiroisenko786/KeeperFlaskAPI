@@ -1,4 +1,4 @@
-brands = {}
+retailers = {}
 items = {}
 # items = {
 #     1 : {
